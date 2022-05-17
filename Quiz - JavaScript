@@ -1,0 +1,92 @@
+/* 
+  1. Store correct answers
+   - When quiz begins, no answers are correct
+*/
+let rank = 0;
+
+// 2. Store the rank of a player
+console.log(rank);
+
+// 3. Select the <main> HTML element
+
+
+/*
+  4. Ask at least 5 questions
+   - Store each answer in a variable
+   - Keep track of the number of correct answers
+*/
+const guess1 = prompt ('What is my cats name?')
+const ans1 = 'Berlioz'
+if ( guess1 === ans1){
+	rank = rank + 1
+	console.log(rank);	
+} else {
+		alert("Sorry, that's not right")
+		console.log(rank);
+}
+
+const guess2 = prompt ('What is my favorite color?')
+const ans2 = 'Pink'
+if ( guess2 === ans2 ){
+		rank = rank + 1
+		console.log(rank);
+}else{
+		alert("Sorry, that's not right")
+		console.log(rank);
+}
+
+const guess3 = prompt ('What is the programming language I am learning?')
+const ans3 = 'JavaScript'
+if ( guess3 === ans3 ){
+		rank = rank + 1
+		console.log(rank);		
+}else{
+		alert("Sorry, that's not right")
+		console.log(rank);
+}
+
+const guess4 = prompt ('Where did I take a trip the other day?')
+const ans4 = 'Florida'
+if (  guess4 === ans4){
+		rank = rank + 1
+		console.log(rank);
+}else{
+		alert("Sorry, that's not right")
+		console.log(rank);
+}
+
+const guess5 = prompt ('What is my favorite video game?')
+const ans5 = 'Undertale'
+if ( guess5 === ans5 ){
+		rank = rank + 1
+		console.log(rank);
+}else{
+		alert("Sorry, that's not right")
+		console.log(rank);
+}
+
+
+/*
+  5. Rank player based on number of correct answers
+   - 5 correct = Gold
+   - 3-4 correct = Silver
+   - 1-2 correct = Bronze
+   - 0 correct = No crown
+*/
+
+if ( rank === 5){
+	rank = 'Gold';
+	 console.log('Gold')
+}else if( rank === 3 || 4 ){
+	rank = 'Silver';
+	console.log('Silver')
+}else if( rank === 1 || 2 ){
+		rank = 'Bronze';
+	console.log('Bronze')
+}else if ( rank === 0 ){
+	rank = 	'No crown';
+	console.log('No crown')}
+
+
+// 6. Output results to the <main> element
+document.querySelector("main").textContent = `Your ranking is ${rank}`;
